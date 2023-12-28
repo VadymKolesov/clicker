@@ -1,5 +1,3 @@
-import perks from "./perks.JSON" assert { type: "json" };
-
 const refs = {
   scoreTitle: document.querySelector(".score-title"),
   coinBtn: document.querySelector(".coin-btn"),
