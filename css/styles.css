@@ -108,6 +108,10 @@ button {
   padding: 100px 0;
 }
 
+.coin-btn {
+  touch-action: manipulation;
+}
+
 /** ---- COIN ---- */
 
 /*! ---- PERKS ---- */
@@ -129,8 +133,20 @@ button {
   gap: 5px;
 }
 
-.cost {
-  color: red;
+.perk-btn {
+  touch-action: manipulation;
+}
+
+.cant-buy {
+  color: rgb(255, 206, 206);
+}
+
+.buyed {
+  color: #b8b8b8;
+}
+
+.can-buy {
+  color: #0f8604;
 }
 
 /*! ---- PERKS ---- */

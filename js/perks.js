@@ -1,10 +1,10 @@
 const perks = {
   wood: {
-    cost: 10,
+    cost: 1000,
     power: 2,
   },
   silver: {
-    cost: 20,
+    cost: 4000,
     power: 4,
   },
 };

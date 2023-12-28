@@ -22,12 +22,21 @@ if (localStorage.getItem("power")) {
 }
 
 for (let key in perks) {
+  refs[key].nextElementSibling.textContent = perks[key].cost;
+
+  if (POWER >= perks[key].power) {
+    refs[key].disabled = true;
+    refs[key].nextElementSibling.classList.add("buyed");
+    continue;
+  }
+
   if (SCORES < perks[key].cost) {
     refs[key].disabled = true;
-  } else {
-    refs[key].nextElementSibling.style.color = "green";
+    refs[key].nextElementSibling.classList.add("cant-buy");
+  } else if (SCORES >= perks[key].cost) {
+    refs[key].disabled = false;
+    refs[key].nextElementSibling.classList.add("can-buy");
   }
-  refs[key].nextElementSibling.textContent = perks[key].cost;
 }
 
 refs.coinBtn.addEventListener("click", addScore);
@@ -41,13 +50,10 @@ function addScore() {
     refs.coinImage.style.transform = "scale(1)";
   }, 15);
   for (let key in perks) {
-    if (SCORES >= perks[key].cost) {
+    if (SCORES >= perks[key].cost && POWER < perks[key].power) {
       refs[key].disabled = false;
-      refs[key].nextElementSibling.style.color = "green";
-    }
-    if (Number(localStorage.getItem("power")) >= perks[key].power) {
-      refs[key].disabled = true;
-      refs[key].nextElementSibling.style.color = "grey";
+      refs[key].nextElementSibling.classList.remove("cant-buy");
+      refs[key].nextElementSibling.classList.add("can-buy");
     }
   }
 }
@@ -62,4 +68,16 @@ function buyPerk(e) {
   }
   localStorage.setItem("power", perks[e.target.name].power);
   POWER = Number(localStorage.getItem("power"));
+
+  refs[e.target.name].disabled = true;
+  refs[e.target.name].nextElementSibling.classList.remove("can-buy");
+  refs[e.target.name].nextElementSibling.classList.add("buyed");
+
+  for (let key in perks) {
+    if (POWER >= perks[key].power) {
+      refs[key].disabled = true;
+      refs[key].nextElementSibling.classList.remove("can-buy");
+      refs[key].nextElementSibling.classList.add("buyed");
+    }
+  }
 }
