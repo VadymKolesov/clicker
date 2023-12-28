@@ -102,6 +102,10 @@ button {
 
 /** ---- COIN ---- */
 
+.coin-btn {
+  border: 1px solid red;
+}
+
 .clicker-section {
   display: flex;
   justify-content: center;
