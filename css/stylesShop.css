@@ -1,26 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+.title-shop {
+  text-align: center;
+  color: white;
+  border: 1px solid slateblue;
+  border-radius: 20%;
+  background-color: blueviolet;
+}
 .shop-items {
+  font-family: VT323;
+  position: relative;
   display: flex;
-  border: 2px solid red;
-  color: green;
-  margin: 5px;
+  top: -500px;
+  left: -1060px;
+  z-index: 999;
 }
 .border-list {
+  position: absolutes;
+  background-color: rgba(9, 58, 58, 0.486);
+  border: 1px solid black;
+  width: 300px;
   height: 100%;
   padding: 25px;
   margin: 0 auto;
 }
+.price {
+  color: green;
+}
+
 .flex-card {
-  display: flex;
   align-items: baseline;
-  gap: 60px;
+  flex-direction: column;
   list-style: none;
 }
 .kard-item {
-  font-size: 200px;
-  padding: 15px;
+  background-color: white;
+  font-size: 100px;
+  padding: 10px;
   border-radius: 15px;
-  border: 1px solid black;
+  border: 1px solid rgb(91, 17, 126);
+  text-align: center;
+  margin-top: 15px;
 }
-.button-update {
-  color: rgb(rgb(223, 21, 21), rgb(223, 9, 9), rgb(211, 22, 164));
+.price {
+  font-size: 20px;
+}
+
+.arrow {
+  position: fixed;
+  left: 297px;
+  top: 50%;
+  border: 2px solid gray;
+  padding: 15px;
+}
+
+/*  Menu Arrow Style */
+.kard-item:hover {
+  background-color: aqua;
+  transition: background-color 150ms ease-in-out;
+}
+
+.border-list:hover {
+  transform: translateX(270px);
+  transition: transform 400ms ease-in-out;
+}
+.border-list:not(:hover) {
+  transform: translateX(0);
+  transition: transform 400ms ease-in-out;
 }

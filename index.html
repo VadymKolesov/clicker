@@ -14,32 +14,52 @@
     <title>Pixel Coin</title>
   </head>
   <body>
-    <section class="score-section">
-      <h1 class="score-title">0</h1>
-    </section>
-    <section class="clicker-section">
-      <button type="button" class="coin-btn">
-        <img src="./images/coin.svg" alt="Coin" width="230" class="coin-img" />
-      </button>
-    </section>
-    <section class="perks-section">
-      <ul id="perksItems" class="list"></ul>
-    </section>
-    <section class="shop-items">
-      <div class="border-list">
-        <ul class="flex-card">
-          <div class="kard-item">
-            <button type="button" class="button-update">2X</button>
+    <main>
+      <section class="score-section">
+        <h1 class="score-title">0</h1>
+      </section>
+      <section class="clicker-section">
+        <button type="button" class="coin-btn">
+          <img
+            src="./images/coin.svg"
+            alt="Coin"
+            width="230"
+            class="coin-img"
+          />
+        </button>
+      </section>
+      <section class="perks-section">
+        <ul id="perksItems" class="list"></ul>
+      </section>
+      <section class="shop-items">
+        <div class="border-list">
+          <h1 class="title-shop">SHOP</h1>
+          <ul class="flex-card">
+            <div class="kard-item">
+              <button id="2x" type="button" class="button-update">2X</button>
+              <p class="price">1000 Coins</p>
+            </div>
+            <div class="kard-item">
+              <button id="5x" type="button" class="button-update">5X</button>
+              <p class="price">2000 Coins</p>
+            </div>
+            <div class="kard-item">
+              <button id="10x" type="button" class="button-update">10X</button>
+              <p class="price">5000 Coins</p>
+            </div>
+            <div class="kard-item">
+              <button id="999x" type="button" class="button-update">
+                999X
+              </button>
+              <p class="price">999999 Coins</p>
+            </div>
+          </ul>
+          <div class="arrow">
+            <p>=====></p>
           </div>
-          <div class="kard-item">
-            <button type="button" class="button-update">5X</button>
-          </div>
-          <div class="kard-item">
-            <button type="button" class="button-update">10X</button>
-          </div>
-        </ul>
-      </div>
-    </section>
+        </div>
+      </section>
+    </main>
     <script src="./js/perks.js"></script>
     <script src="./js/script.js"></script>
   </body>

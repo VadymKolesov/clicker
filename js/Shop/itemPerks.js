@@ -1,4 +1,4 @@
-const itemPerks = {
+export const itemPerks = {
   TwothX: {
     powerUp: 2,
   },
