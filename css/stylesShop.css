@@ -1,0 +1,26 @@
+.shop-items {
+  display: flex;
+  border: 2px solid red;
+  color: green;
+  margin: 5px;
+}
+.border-list {
+  height: 100%;
+  padding: 25px;
+  margin: 0 auto;
+}
+.flex-card {
+  display: flex;
+  align-items: baseline;
+  gap: 60px;
+  list-style: none;
+}
+.kard-item {
+  font-size: 200px;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.button-update {
+  color: rgb(rgb(223, 21, 21), rgb(223, 9, 9), rgb(211, 22, 164));
+}
