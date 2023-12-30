@@ -16,7 +16,7 @@
   <body>
     <main>
       <section class="score-section">
-        <h1 class="score-title">0</h1>
+        <span id="coin" class="score-title">0</span>
       </section>
       <section class="clicker-section">
         <button type="button" class="coin-btn">
@@ -27,9 +27,6 @@
             class="coin-img"
           />
         </button>
-      </section>
-      <section class="perks-section">
-        <ul id="perksItems" class="list"></ul>
       </section>
       <section class="shop-items">
         <div class="border-list">
@@ -61,6 +58,6 @@
       </section>
     </main>
     <script src="./js/perks.js"></script>
-    <script src="./js/script.js"></script>
+    <script type="module" src="./js/Bonuses/bonuses.js"></script>
   </body>
 </html>

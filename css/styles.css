@@ -51,14 +51,6 @@ button {
   overflow: hidden;
 }
 
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
-}
-
 body {
   font-family: "VT323", monospace;
   margin: 0;
@@ -87,6 +79,7 @@ button {
 
 .score-section {
   margin-top: 92px;
+  text-align: center;
 }
 
 .score-title {
